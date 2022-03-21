@@ -1,38 +1,148 @@
-.App {
+.homeWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  color: #fff;
+}
+
+.formWrapper {
+  background-color: #282a36;
+  padding: 20px;
+  border-radius: 10px;
+  width: 400px;
+  max-width: 90%;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.mainLabel {
+  margin-bottom: 20px;
+}
+
+.formWrapper h1 {
+  text-align: center;
+  margin-top: 5px;
+}
+
+.inputField {
+  padding: 10px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  margin-bottom: 14px;
+  background: #eee;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.btn {
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.joinBtn {
+  background-color: #4aed88;
+  width: 100px;
+  margin-left: auto;
+}
+
+.joinBtn:hover {
+  background-color: #2b482c;
+}
+
+.createInfo {
+  margin-top: 20px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.createInfo a {
+  color: #4aed88;
+  text-decoration: none;
+  border-bottom: 1px solid #4aed88;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.createInfo a:hover {
+  color: #33a760;
+  border-bottom: 1px solid #33a760;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.mainWrap {
+  display: grid;
+  grid-template-columns: 230px 1fr;
+}
+
+.aside {
+  background-color: #1c1e29;
+  padding: 16px;
+  color: #fff;
   display: flex;
   flex-direction: column;
+}
+
+.asideInner {
+  flex: 1;
+}
+
+.clientsList {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-start;
 }
 
-.App-link {
-  color: #61dafb;
+.client {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-weight: bold;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.username {
+  margin-top: 10px;
+}
+
+.asideInner h1 {
+  text-align: center;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #424242;
+}
+
+.leaveBtn {
+  margin-top: 20px;
+  background-color: #4aed88;
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+  font-weight: bold;
+}
+
+.copyBtn {
+  font-weight: bold;
+}
+
+.leaveBtn:hover {
+  background-color: #33a760;
+}
+
+.CodeMirror {
+  min-height: calc(100vh - 20px);
+  font-size: 20px;
+  line-height: 1.6;
+  padding-top: 20px;
 }
