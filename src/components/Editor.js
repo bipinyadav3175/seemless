@@ -48,7 +48,9 @@ const Editor = ({roomId, socketRef, onCodeChange}) => {
             socketRef.current.on(ACTIONS.CODE_CHANGE, ({code})=> {
                 console.log(code)
                 if(code != null){
+                    const preCursor = editorRef.current.getCursor()
                     editorRef.current.setValue(code)
+                    editorRef.current.setCursor(preCursor)
                 }
             })
         }
